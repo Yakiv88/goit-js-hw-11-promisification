@@ -10,6 +10,7 @@ const users = [
   { name: 'Ajax', active: true },
   { name: 'Lux', active: false },
 ];
+    
 
 const toggleUserState = (allUsers, userName) => {
   return new Promise((resolve) => {
@@ -21,7 +22,9 @@ const toggleUserState = (allUsers, userName) => {
   });
 };
 
+
 const logger_2 = updatedUsers => console.table(updatedUsers);
+
 
 toggleUserState(users, 'Mango').then(logger_2);
 toggleUserState(users, 'Lux').then(logger_2);
